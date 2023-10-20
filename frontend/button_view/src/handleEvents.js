@@ -17,27 +17,28 @@ export default function HandleEvents() {
     let avatarUrl = null
 
     const handleOnUserSet = (event) => {
-        if(event.data.type === "registered"){
-            userId = event.data.id
-            checkAndSendDataToBackend(userId, avatarUrl)
+        if (event.data.type === 'registered') {
+            userId = event.data.id;
+            checkAndSendDataToBackend(userId, avatarUrl);
         }
     }
+    
     const handleOnAvatarExported = (event) => {
-        avatarUrl = event.data.avatarUrl
-        checkAndSendDataToBackend(userId, avatarUrl)
+        avatarUrl = event.data.avatarId;
+        checkAndSendDataToBackend(userId, avatarUrl);
     }
 
     const checkAndSendDataToBackend = async (userId, avatarUrl) => {
+        console.log(userId, avatarUrl)
+        // Check if both userId and avatarUrl are defined
         if (userId && avatarUrl) {
             const data = {
-                data: {
-                    userId,
-                    avatarUrl,
-                }
+                userId,
+                avatarUrl
             }
-
             try {
-                const response = await axios.post(BACKEND_URL, data)
+                const response = await axios.post(BACKEND_URL, data, config)
+                console.log("request sent")
                 console.log(response)
             } catch (error) {
                 console.error('Error sending data to the server:', error)
