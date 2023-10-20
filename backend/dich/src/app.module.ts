@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { CreateAssetModule } from './create_asset/create_asset.module';
+import { CreateAssetController } from './create_asset/create_asset.controller';
+import { CreateAssetService } from './create_asset/create_asset.service';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [CreateAssetModule],
+  controllers: [CreateAssetController],
+  providers: [CreateAssetService],
 })
 export class AppModule {}
