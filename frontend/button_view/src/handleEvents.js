@@ -15,6 +15,9 @@ const BACKEND_URL = 'http://localhost:4000/id/create_outfit'
 export default function HandleEvents() {
     let userId = null
     let avatarUrl = null
+    // after the last rpm update possible to get user id from handleOnAvatarExported: event.data.userId
+    // but to check if the user has signed up i use handleOnUserSet 
+    // where there is event.data.type = 'guest' or 'registered'
 
     const handleOnUserSet = (event) => {
         if (event.data.type === 'registered') {
@@ -24,6 +27,7 @@ export default function HandleEvents() {
     }
     
     const handleOnAvatarExported = (event) => {
+        console.log(event.data)
         avatarUrl = event.data.avatarId;
         checkAndSendDataToBackend(userId, avatarUrl);
     }
