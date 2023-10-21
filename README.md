@@ -48,9 +48,9 @@ $ npm run test:cov
     $ Import the AvatarCreator component from the @readyplayerme/react-avatar-creator library.
 
     # Usage
-    $ Implement two event -[handlers](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) : handleOnUserSet and handleOnAvatarExported. These handlers update the userId and avatarUrl variables and then call the checkAndSendDataToBackend function.
+    $ Implement two event - [handlers](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) : handleOnUserSet and handleOnAvatarExported. These handlers update the userId and avatarUrl variables and then call the checkAndSendDataToBackend function.
 
-    $ The -[checkAndSendDataToBackend](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) function checks if both userId and avatarUrl are defined. If so, it sends a POST request to the  backend URL with the user data using Axios.
+    $ The - [checkAndSendDataToBackend](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) function checks if both userId and avatarUrl are defined. If so, it sends a POST request to the  backend URL with the user data using Axios.
 
     $ The component renders the AvatarCreator component, passing it the configuration, style, and event handlers. Users can create avatars, and the user data is sent to the backend when both userId and avatarUrl are available.
 ```
@@ -58,9 +58,9 @@ $ npm run test:cov
 ## backend
 ```bash
     # Usage
-    $ Service Method: -[Unlock_equip](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/create_asset/create_asset.service.ts)
+    $ Service Method: - [] [Unlock_equip](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/create_asset/create_asset.service.ts)
 
-    $ This method receives a -[CreateOutfitDto](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/dtos/user_rpm.dto.ts) object that contains user data, specifically the userId and avatarUrl.
+    $ This method receives a - [CreateOutfitDto](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/dtos/user_rpm.dto.ts) object that contains user data, specifically the userId and avatarUrl.
 
     $ It defines user_id, and avatarId variables based on the received data from frontend.
     $ It constructs the URLs for unlocking and equipping assets using the Ready Player Me API.
