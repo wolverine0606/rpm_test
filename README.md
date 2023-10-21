@@ -1,6 +1,6 @@
 
 This is an example project how to upload premium assets to your Ready Player Me app. 
-There are two main components: react frontend where you can find simple button that contains Ready Player Me Avatar creator and nestjs backend that gets users data and creates new assets.
+There are two main components: react [frontend](https://github.com/wolverine0606/rpm_test/tree/main/frontend/button_view) where you can find simple button that contains Ready Player Me Avatar creator and nestjs backend that gets users data and creates new assets.
 
 ## Installation
 
@@ -51,7 +51,7 @@ $ npm run test:cov
     - [handlers](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) 
     : handleOnUserSet and handleOnAvatarExported. These handlers update the userId and avatarUrl variables and then call the checkAndSendDataToBackend function.
 
-    - [checkAndSendDataToBackend](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) 
+    $ [checkAndSendDataToBackend](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js#L31-L50)
     : function checks if both userId and avatarUrl are defined. If so, it sends a POST request to the  backend URL with the user data using Axios.
 
     - The component renders the AvatarCreator component, passing it the configuration, style, and event handlers. Users can create avatars, and the user data is sent to the backend when both userId and avatarUrl are available.
@@ -60,7 +60,7 @@ $ npm run test:cov
 ## backend
 ```bash
     # Usage
-    - [] [Unlock_equip](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/create_asset/create_asset.service.ts) - Service Method
+     [] [Unlock_equip](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/create_asset/create_asset.service.ts) - Service Method
 
     - [CreateOutfitDto](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/dtos/user_rpm.dto.ts) object that contains user data, specifically the userId and avatarUrl.
 
