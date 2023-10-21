@@ -1,6 +1,6 @@
 
 This is an example project how to upload premium assets to your Ready Player Me app. 
-There are two main components: react [frontend](https://github.com/wolverine0606/rpm_test/tree/main/frontend/button_view) where you can find simple button that contains Ready Player Me Avatar creator and nestjs backend that gets users data and creates new assets.
+There are two main components: react [frontend](https://github.com/wolverine0606/rpm_test/tree/main/frontend/button_view) where you can find simple button that contains Ready Player Me Avatar creator and nestjs [backend](https://github.com/wolverine0606/rpm_test/tree/main/backend/dich) that gets users data and creates new assets.
 
 ## Installation
 
