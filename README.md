@@ -39,22 +39,24 @@ $ npm run test:cov
 # rpm_test
 
 ## frontend
- Avatar Creator with React and Axios
-    - This code snippet demonstrates how to create a simple React component that integrates the Ready Player Me Avatar Creator with the ability to send user data to a local backend server using Axios. The Ready Player Me Avatar Creator allows users to create avatars with various customization options.
- Import the AvatarCreator component from the @readyplayerme/react-avatar-creator library.
+Avatar Creator with React and Axios
+This code snippet demonstrates how to create a simple React component that integrates the Ready Player Me Avatar Creator with the ability to 
+send user data to a local backend server using Axios. The Ready Player Me Avatar Creator allows users to create avatars with various customization options.
 
-# Usage
+### Usage
 [handlers](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js) 
 handleOnUserSet and handleOnAvatarExported. These handlers update the userId and avatarUrl variables and then call the checkAndSendDataToBackend function.
  
-[checkAndSendDataToBackend](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js#L31-L50) : function checks if both userId and avatarUrl are defined. If so, it sends a POST request to the  backend URL with the user data using Axios.
+[checkAndSendDataToBackend](https://github.com/wolverine0606/rpm_test/blob/main/frontend/button_view/src/handleEvents.js#L31-L50) 
+: function checks if both userId and avatarUrl are defined. If so, it sends a POST request to the  backend URL with the user data using Axios.
 
-The component renders the AvatarCreator component, passing it the configuration, style, and event handlers. Users can create avatars, and the user data is sent to the backend when both userId and avatarUrl are available.
+The component renders the AvatarCreator component, passing it the configuration, style, and event handlers. Users can create avatars, 
+and the user data is sent to the backend when both userId and avatarUrl are available.
 
 
 ## backend
-# Usage
-[] [Unlock_equip](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/create_asset/create_asset.service.ts) - Service Method
+### Usage
+[Unlock_equip](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/create_asset/create_asset.service.ts) - Service Method that reciever and use data to unlock an asset for user and equip him
 
 [CreateOutfitDto](https://github.com/wolverine0606/rpm_test/blob/main/backend/dich/src/dtos/user_rpm.dto.ts) object that contains user data, specifically the userId and avatarUrl.
 
